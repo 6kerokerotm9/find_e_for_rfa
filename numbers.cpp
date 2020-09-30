@@ -33,22 +33,18 @@ int main() {
     std::cin >> second; 
 
     std::vector<int> pq;
-    for(int i=2; i<input; i++) {
+    for(int i=1; i<=input; i++) {
         if(input % i == 0) {
             pq.push_back(i);
         }
     }
 
     std::vector<int> factor;
-    for(int i=2; i<second; i++) {
+    for(int i=1; i<=second; i++) {
         if(second % i == 0) {
            factor.push_back(i);
         }
     }
 
     print(common(pq, factor));
-
-    /*print(pq);
-    std::cout << "\n\n" << std::endl;
-    print(factor);*/
 }
